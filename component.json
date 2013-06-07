@@ -1,0 +1,13 @@
+{
+  "name": "view-select",
+  "repo": "apily/view-select",
+  "version": "0.0.1",
+  "description": "select element plugin for view",
+  "keywords": ["view", "query", "selector", "element"],
+  "scripts": ["index.js"],
+  "dependencies": {
+    "enricomarino/element-select": "*"
+  },
+  "development": {},
+  "license": "MIT"
+}
