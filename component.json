@@ -6,7 +6,7 @@
   "keywords": ["view", "query", "selector", "element"],
   "scripts": ["index.js"],
   "dependencies": {
-    "enricomarino/element-select": "*"
+    "enricomarino/element-query": "*"
   },
   "development": {},
   "license": "MIT"
