@@ -2,7 +2,7 @@
  * Component dependencies
  */
 
-var delegate = require('element-query');
+var query = require('element-query');
 
 /**
  * Expose plugin
@@ -10,10 +10,7 @@ var delegate = require('element-query');
 
 module.exports = function (view) {
   
-  var element = view.element;
-  
-  element
-    .use(query);
+  view.element.use(query);
 
   /**
    * select
@@ -25,6 +22,7 @@ module.exports = function (view) {
    */
   
   view.prototype.select = function (name, selector) {
+    this.elements = this.elements || {};
     this.elements[name] = this.el.query(selector);
     return this;
   };
