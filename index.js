@@ -15,16 +15,25 @@ module.exports = function (view) {
   /**
    * select
    *
-   * @param {String} event event
-   * @param {String} method method
+   * @param {Object} selectors
+   *   @key {String} name 
+   *   @value {String} selector 
+   * 
    * @return {view} this for chaining
    * @api public
    */
   
-  view.prototype.select = function (name, selector) {
-    this.elements = this.elements || {};
-    this.elements[name] = this.el.query(selector);
-    return this;
+  view.prototype.select = function (selectors) {
+    var res = {};
+    var name;
+    var selector;
+    
+    for (name in selectors) {
+      selector = selectors[name];
+      res[name] = this.el.query(selector);
+    }
+
+    return res;
   };
 
   return view;
