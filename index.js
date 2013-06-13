@@ -32,7 +32,7 @@ module.exports = function (view) {
     for (name in selectors) {
       selector = selectors[name];
       el = this.el.query(selector);
-      res[name] = view.element(el);
+      res[name] = el;
     }
 
     return res;
