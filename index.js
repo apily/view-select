@@ -27,10 +27,12 @@ module.exports = function (view) {
     var res = {};
     var name;
     var selector;
+    var el;
     
     for (name in selectors) {
       selector = selectors[name];
-      res[name] = this.el.query(selector);
+      el = this.el.query(selector);
+      res[name] = view.element(el);
     }
 
     return res;
